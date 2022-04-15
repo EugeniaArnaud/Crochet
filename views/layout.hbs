@@ -40,14 +40,21 @@
                <li><a href="/" class="menu-btn">HOME</a></li>
                <li><a href="order" class="menu-btn">Order here</a></li>
           <!-- <li><a href="#" class="menu-btn">Subscribe</a></li> -->
+           
            {{#if user}}
-          <li><a href="login/logout" class="menu-btn">Logout</a></li>
            <li><a href="secret" class="menu-btn">Free Patterns</a></li>
+           </ul>
+          <ul class="content_nav">
+          <li><a href="login/logout" class="menu-btn">Logout</a></li>   
+        
              {{else}}
+             
+           
              <li><a href="login" class="menu-btn">Login</a></li>
+              
               {{/if}}
-         
-        </ul>
+        </ul>  
+        
       </div>
     </nav> 
 
