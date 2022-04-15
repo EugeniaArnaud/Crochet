@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- letras -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&family=Roboto:wght@300;400&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+    <!-- fontawesome logos -->
+    <script
+      src="https://kit.fontawesome.com/768f10d00c.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+<body>
+
+
+
+    <nav class="navbar">
+      <div class="max-width">
+        {{!-- <ul class="content_nav">
+          <li><a href="#" class="menu-btn">HOME</a></li>
+          <li><a href="secret" class="menu-btn">Order here</a></li>
+        </ul> --}}
+        <ul class="content_nav">
+               <li><a href="/" class="menu-btn">HOME</a></li>
+               <li><a href="order" class="menu-btn">Order here</a></li>
+          <!-- <li><a href="#" class="menu-btn">Subscribe</a></li> -->
+           {{#if user}}
+          <li><a href="login/logout" class="menu-btn">Logout</a></li>
+           <li><a href="secret" class="menu-btn">Free Patterns</a></li>
+             {{else}}
+             <li><a href="login" class="menu-btn">Login</a></li>
+              {{/if}}
+         
+        </ul>
+      </div>
+    </nav> 
+
+ 
+
+  
+
+    {{{body}}}
+
+   
+
+  </body>
+</html>

@@ -1,0 +1,856 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+.max-width {
+    max-width: 1700px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: #ede8e2;
+  line-height: 1.5;
+  }
+
+
+img{
+  width: 300px;
+    height: 300px;
+    opacity: 1;
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+}
+.fade{
+  opacity: 1;
+}
+.fade:hover {
+  opacity: 0.6;
+}
+
+
+a{
+  text-decoration: none;
+}
+/* CARDS STYLE */
+.container{
+  font-family: 'poppins', sans-serif;
+  font-weight: 200;
+width: 1100px;
+max-width: 100%;
+margin: 0 auto;
+margin-top: 130px;
+margin-bottom: 100px;
+}
+
+
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card{
+  flex: 1 1 20rem;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 20px;
+background-color: #fff;
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.4) ;
+align-self: normal;
+align-items: center;
+padding: 10px 10px;
+padding-bottom: 20px;
+}
+
+
+
+.card h4{
+ font-weight: 400;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+
+.card .btn{
+  display: inline-block;
+  background-color: rgba(158, 100, 23, 0.623);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  margin-top: auto;
+}
+
+.card p {
+  margin-bottom: 25px;
+}
+
+/* GALLERY STYLE */
+/* popup */
+/* .image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 1s;
+} */
+.popup{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 1600px;
+  height: 80vh;
+  max-height: 800px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.863);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  overflow: hidden;
+  transition: 1s;
+  margin-top: 50px;
+  display: none;
+ 
+}
+
+
+.top-bar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  font-weight: 300;
+  background-color: #fff;
+  text-align: center;
+  line-height: 50px;
+}
+
+.close-btn{
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+
+.large-image{
+  margin-top: 5%;
+  width: 80%;
+  height: 80%;
+  margin-left: 10%;
+  object-fit: contain;
+}
+
+.popup.active{
+  transform: translate(-50%, -50%) scale(1);
+}
+.popup.active .close-btn, .popup.active .image-name,
+.popup.active .large-image{
+  transition: opacity .5s;
+  transition-delay: 1s;
+}
+
+/* .arrow-btn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  border-radius: 50%;
+  border: none;
+  background: none;
+}
+
+.left-arrow{
+  left: 10px;
+}
+.right-arrow{
+  right: 10px;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.arrow-btn:hover{
+  background: rgba(0, 0, 0, 0.5);
+} */
+
+
+/* .index{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: rgba(182, 33, 33, 0.4);
+} */
+
+
+/* secreto */
+.secreto {
+ 
+  background-image: url("/images/amis.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+   
+  width: 100%;
+  height: 100vh; 
+  display: flex;
+    justify-content: center;
+
+}
+
+ .btnn{
+  display: inline-block;
+  background-color: rgba(158, 100, 23, 0.747);
+  color: #fff;
+  padding: 10px 40px ;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  
+} 
+.btnn p{
+padding: 10px;
+}
+
+/* NAVBAR STYLE */
+.navbar-menu{
+  display: none;
+}
+
+nav {
+    position: fixed;
+width: 100%;
+z-index: 999;
+    background: #fff;
+    padding: 50px 0;
+    /* agrega una sombra debajo y simula una caja */
+    box-shadow: 0px 5px 0px #dedede;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    padding: 30px 0 ;
+
+  }
+  
+  .navbar .max-width {
+    display: flex;
+    align-items: center;
+    /* con este justify pongo un ul de cada lado. */
+    justify-content: space-between;
+    }
+
+    
+
+  .content_nav li {
+    list-style: none;
+    display: inline-block;
+  }
+  
+    .content_nav li a {
+    display: block;
+    text-decoration: none;
+    color: rgb(141, 139, 139); 
+    font-size: 18px;
+    /* espacio entre palabras */
+    margin-left: 25px;
+  }
+  
+  .content_nav li a,
+  .content_nav li a:after,
+  .content_nav li a:before {
+      /* efecto de tardar */
+    transition: all .5s;
+  }
+  .content_nav li a:hover {
+      /* color cuando cambia la letra */
+    color: rgb(65, 42, 33);
+  }
+  
+  /* By Dominik Biedebach @domobch */
+    
+  /* stroke */
+  nav.navbar ul li a{
+    position: relative;
+  }
+  nav.navbar ul li a:after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-bottom: -2px;
+    
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: rgba(65, 42, 33, 0.404);
+    height: 1px;
+    
+  }
+  nav.navbar ul li a:hover:after {
+    width: 100%;
+  }
+
+
+/* formulario contacto */
+
+.contact-section{
+  background: rgba(167, 153, 144, 0.76);
+  font-family: 'Poppins';
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-info{
+  color: #fff;
+  max-width: 600px;
+  line-height: 40px;
+  padding-left: 50px;
+  font-size: 15px;
+}
+
+.contact-info i{
+  margin-right: 20px;
+  font-size: 25px;
+}
+
+.contact-form{
+  max-width: 700px;
+  margin-right: 50px;
+}
+
+.contact-info, .contact-form{
+  flex: 1;
+}
+
+.contact-form h2{
+  color: #fff;
+  text-align: center;
+  font-size: 35px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.contact-form .text-box{
+  background: rgba(141, 125, 115, 0.76);
+  color: #fff;
+  border: none;
+  width: calc(50% - 10px);
+  height: 50px;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.contact-form .text-box:first-child{
+  margin-right: 15px;
+}
+
+.contact-form textarea{
+  background: rgba(141, 125, 115, 0.76);
+  color: #fff;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  min-height: 200px;
+  max-height: 400px;
+  resize: vertical;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  opacity: 0.9;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-form .send-btn{
+  float: right;
+  background: rgba(141, 125, 115, 0.877);
+  color: #fff;
+  border: none;
+  width: 120px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+   /* transition: 0.3s;
+  transition-property: background;  */
+}
+
+ /* .contact-form .send-btn:hover{
+  background: #0582E3;
+}  */
+
+@media screen and (max-width: 950px){
+  .contact-section{
+    flex-direction: column;
+  }
+
+  .contact-info, .contact-form{
+    margin: 30px 50px;
+    margin-top: 120px;
+  }
+
+  .contact-form h2{
+    font-size: 30px;
+  }
+
+  .contact-form .text-box{
+    width: 100%;
+  }
+}
+
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: rgba(255, 255, 255, 0.596);
+  font-family: 'Poppins', sans-serif;
+}
+ ::-moz-placeholder { 
+  /* Firefox 19+ */
+  font-family: 'Poppins', sans-serif;
+   color: rgba(255, 255, 255, 0.596);
+}
+:-ms-input-placeholder { 
+  /* IE 10+ */
+  font-family: 'Poppins', sans-serif;
+  color: rgba(255, 255, 255, 0.596);
+} 
+
+/* LOGIN */
+.container-login{
+  font-family: 'Poppins', sans-serif;
+  max-width: 440px;
+  padding: 0 20px;
+  margin: 170px auto;
+}
+.wrapper-login{
+  width: 100%;
+  background: rgba(255, 255, 255, 0.596);
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+}
+.wrapper-login .title-login{
+  height: 90px;
+  background: rgba(141, 125, 115, 0.678);
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper-login .form-login{
+  padding: 30px 25px 25px 25px;
+}
+.wrapper-login .form-login .row-login{
+  height: 45px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.wrapper-login .form-login .row-login input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 60px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+.form-login .row-login input:focus{
+  border-color: rgba(141, 125, 115, 0.678);
+  box-shadow: inset 0px 0px 2px 2px rgba(24, 26, 25, 0.25);
+}
+.form-login .row-login input::placeholder{
+  color: #999;
+}
+.wrapper-login .form-login .row-login i{
+  position: absolute;
+  width: 47px;
+  height: 100%;
+  color: #fff;
+  font-size: 18px;
+  background: rgba(141, 125, 115, 0.678);
+  border: 1px solid rgba(141, 125, 115, 0.678);
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper-login .form-login .pass{
+  margin: -8px 0 20px 0;
+}
+.wrapper-login .form-login .pass a{
+  color: rgba(141, 125, 115, 0.678);
+  font-size: 17px;
+  text-decoration: none;
+}
+.wrapper-login .form-login .pass a:hover{
+  text-decoration: underline;
+}
+.wrapper-login .form-login .button input{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: rgba(141, 125, 115, 0.678);
+  border: 1px solid rgba(141, 125, 115, 0.678);
+  cursor: pointer;
+}
+form .button input:hover{
+  background: rgba(141, 125, 115, 0.678);
+}
+.wrapper-login .form-login .signup-link{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+.wrapper-login .form-login .signup-link a{
+  color: rgba(141, 125, 115, 0.877);
+  text-decoration: none;
+}
+.form-login .signup-link a:hover{
+  text-decoration: underline;
+}
+
+
+ /* responsive */
+
+@media screen and (max-width: 1080px){
+  /* .wrapper{ */
+    
+    /* font-family: 'Poppins';
+    position: absolute;
+    /* top: 60%; */
+    /* margin-top: 325px; */
+    /* left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 550px;
+    background: rgba(167, 153, 144, 0.76);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);  */
+  /* } */
+}
+@media screen and ( max-height: 700px ){
+  /* .wrapper{
+    
+    font-family: 'Poppins';
+    position: absolute;
+    top: 57%; */
+    /* margin-top: 325px; */
+    /* left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 550px;
+    background: rgba(167, 153, 144, 0.76);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  } */
+}
+
+@media screen and ( max-height: 541px ){
+  /* .wrapper{
+    top: 60%;
+  } */
+}
+
+@media screen and (max-width: 600px){
+  /* .contact-form{
+    flex-direction: column;
+  }
+  .msg textarea{
+    height: 80px;
+  }
+  .input-fields,
+  .msg{
+    width: 100%;
+  } */
+}
+
+
+
+ 
+
+@media (max-width: 1080px){
+  
+  .card{
+    flex:  0 0 1rem;
+    margin: 10px 10px;
+
+  padding: 10px 10px;
+  }  
+  
+  .row{
+    justify-content: center
+  }
+  
+}
+
+    @media (max-width: 523px){
+      nav{
+        width: 100;
+      }
+.navbar{
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+.navbar-menu{
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+.content_nav li a {
+  margin-left: 20px;
+}
+          
+.max-width {
+  display: flex;
+justify-content: center;
+  padding: 0;
+      } 
+         .navbar .max-width {
+        display: flex;
+        align-items: center;
+        /* con este justify pongo un ul de cada lado. y en responsive lo centro */
+        justify-content: center;
+        }
+
+
+
+
+        /* .content_section_contact {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-column-end: auto;
+          padding-left: 30px;
+          padding-right: 30px;
+          height: 600px;
+          padding-top: 100px; 
+          justify-items: center;
+          align-items: center; 
+      }
+     .contact-form{
+    display: grid;
+        grid-template-columns: 1fr;
+        grid-column-end: auto;
+        padding: 30px;
+       
+  }
+
+  .wrapper{
+        padding: 0px; 
+      height: 100%;
+         }
+
+  .msg textarea{
+    height: 200px;
+  }
+  .input-fields,
+  .msg{
+    width: 100%;
+  } */
+
+
+   
+}
+  
+         
+    
+
+    @media (max-width: 476px){
+      .content_nav li a {
+        margin-left: 15px;
+      }
+
+      .max-width {
+  display: flex;
+justify-content: center;
+  padding: 0;
+  
+      } 
+         .navbar .max-width {
+        display: flex;
+        align-items: center;
+        /* con este justify pongo un ul de cada lado. y en responsive lo centro */
+        justify-content: center;
+        }
+    }
+
+
+
+
+    /* CARDS STYLE */
+/* .container{
+  font-family: 'poppins', sans-serif;
+  font-weight: 200;
+width: 1100px;
+max-width: 100%;
+margin: 0 auto;
+margin-top: 130px;
+margin-bottom: 100px;
+}
+
+
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card{
+  flex: 1 1 20rem;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 20px;
+background-color: #fff;
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.4) ;
+align-self: normal;
+align-items: center;
+padding: 10px 10px;
+padding-bottom: 20px;
+}
+
+
+
+.card h4{
+ font-weight: 400;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+
+.card .btn{
+  display: inline-block;
+  background-color: rgba(158, 100, 23, 0.623);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  margin-top: auto;
+}
+
+.card p {
+  margin-bottom: 25px;
+} */
+
+/* GALLERY STYLE */
+/* popup */
+/* .popup{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 1600px;
+  height: 90vh;
+  max-height: 800px;
+  border-radius: 20px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  overflow: hidden;
+  transition: 1s;
+  margin-top: 50px;
+}
+
+.top-bar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  font-weight: 300;
+}
+
+.close-btn{
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  cursor: pointer;
+}
+
+.arrow-btn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  border-radius: 50%;
+  border: none;
+  background: none;
+}
+
+.left-arrow{
+  left: 10px;
+}
+.right-arrow{
+  right: 10px;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.arrow-btn:hover{
+  background: rgba(0, 0, 0, 0.5);
+}
+
+
+.index{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.large-image{
+  margin-top: 5%;
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+} */

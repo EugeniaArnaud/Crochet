@@ -1,0 +1,45 @@
+
+              
+
+     <!--contact section start-->
+     <div class="contact-section">
+        <div class="contact-info">
+          <div> To ask for a budget please select the measure you are looking for: </div>
+          <div> Measures: S(12x9) M(20x12) L(30x15)</div>
+          <div>And then mention the Amigurumi Code or Name</div>
+                 </div>
+        <div class="contact-form">
+            <h2>Order Here</h2>
+            
+            <form class="contact" action="/order" method="POST">
+                   <input type="text" class="text-box" id="name" name="name" placeholder="Your Name" autofocus {{#if formData.name}}
+                    value="{{formData.name}}" {{/if}}>
+
+                                                 
+                <input type="text" class="text-box" name="email" id="email" placeholder="Your Email" {{#if formData.email}}
+                    value={{formData.email}} {{/if}}>
+
+                   
+                    <textarea name="message" id="message"placeholder="Message">{{formData.message}}</textarea>
+                      
+               <input type="submit" name="submit" class="send-btn" value="Send"> 
+
+                {{#if sendMessage}}
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    {{sendMessage}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {{/if}}
+                
+                {{#each arrWarnings}}
+                <div class="alert alert-danger" role="alert">
+                    {{msg}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {{/each}}
+            </form>
+          </div>
+      </div> 
+
+      <!--contact section end-->
+
