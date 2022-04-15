@@ -62,7 +62,7 @@ justify-content: center;
 align-items: center;
 padding-bottom: 15px;
 color: rgb(70, 56, 27);
- flex-wrap: wrap;
+text-align: center;
 }
 .second-title{
   color: rgb(70, 56, 27);
@@ -70,6 +70,7 @@ color: rgb(70, 56, 27);
 justify-content: center;
 align-items: center;
 padding-bottom: 15px;
+text-align: center;
 }
 
 /* CARDS STYLE */
