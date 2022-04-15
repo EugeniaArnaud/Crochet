@@ -21,15 +21,7 @@ const validationRules = [
 /*POST*/
 /*Las validaciones se aplican a través de un middleware que provee express-validator*/
 router.post( "/",
-  //  [
-  //    body("name", "Debe ingresar su nombre").exists().isLength({ min: 2 }),
-  //    body("lastName", "Debe ingresar su apellido").exists().isLength({ min: 2 }),
-  //    body("email", "Debe ingresar un email válido").exists().isEmail(),
-  //    body("message", "Mensaje debe contener entre 10 y 300 caracteres")
-  //      .exists()
-  //      .trim()
-  //      .isLength({ min: 10, max: 300 }),
-  //  ],
+
   validationRules,
 
   /*terminado el middleware, comienza el callback con los params req y res */
@@ -51,15 +43,7 @@ router.post( "/",
         subject: "Mensaje desde formulario de contacto",
         html: `${req.body.name} envió el siguiente mensaje: ${req.body.message}`,
       };
-
-      // const transport = nodemailer.createTransport({
-      //   host: "smtp.mailtrap.io",
-      //   port: 2525,
-      //   auth: {
-      //     user: "5269e56b456d28",
-      //     pass: "c734cdf8729096"
-      //   }
-      // });                             
+                        
       
        const transport = nodemailer.createTransport({
          host: process.env.HOST,
