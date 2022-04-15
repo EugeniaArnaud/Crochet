@@ -312,7 +312,14 @@ z-index: 999;
 
 
 /* formulario contacto */
-
+.form-login p{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 10px;
+  color: rgba(124, 112, 104, 0.877);
+  
+}
 .contact-section{
   animation: transitionIn 0.75s;
   background: rgba(167, 153, 144, 0.76);
