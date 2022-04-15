@@ -127,6 +127,10 @@ padding-bottom: 20px;
   -o-border-radius: 5px;
   margin-top: auto;
 }
+.card .btn:hover{
+  opacity: 0.8;
+  transition: 0.7s;
+}
 
 .card p {
   margin-bottom: 25px;
@@ -398,7 +402,7 @@ z-index: 999;
 
 .contact-form .send-btn{
   float: right;
-  background: rgba(141, 125, 115, 0.877);
+  background: rgba(141, 125, 115, 0.925);
   color: #fff;
   border: none;
   width: 120px;
@@ -411,7 +415,10 @@ z-index: 999;
   cursor: pointer;
   
 }
-
+.contact-form .send-btn:hover{
+  opacity: 0.7;
+  transition: 1s;
+}
 
 
 @media screen and (max-width: 950px){
@@ -534,6 +541,11 @@ z-index: 999;
   border: 1px solid rgba(141, 125, 115, 0.678);
   cursor: pointer;
 }
+.wrapper-login .form-login .button input:hover{
+  opacity: 0.7;
+  transition: 0.8s;
+}
+
 form .button input:hover{
   background: rgba(141, 125, 115, 0.678);
 }
@@ -542,6 +554,7 @@ form .button input:hover{
   margin-top: 20px;
   font-size: 17px;
 }
+
 .wrapper-login .form-login .signup-link a{
   color: rgba(141, 125, 115, 0.877);
   text-decoration: none;
