@@ -2,7 +2,8 @@ const express = require("express");
 const path = require("path");
 const hbs = require("hbs");
 const session = require("express-session");
-const PORT = 3000;
+// const PORT = 3000;
+const PORT = process.env.PORT || 3001;
 //importamos dotenv para usar vars de entorno y no exponer datos sensibles
 require("dotenv").config();
 const routeIndex = require("./routes/index");
