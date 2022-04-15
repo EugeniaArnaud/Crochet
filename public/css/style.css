@@ -23,6 +23,16 @@ body {
   line-height: 1.5;
   }
 
+  @keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
 
 img{
   width: 300px;
@@ -44,6 +54,7 @@ a{
 }
 /* CARDS STYLE */
 .container{
+  animation: transitionIn 0.75s;
   font-family: 'poppins', sans-serif;
   font-weight: 200;
 width: 1100px;
@@ -167,7 +178,7 @@ padding-bottom: 20px;
 
 /* secreto */
 .secreto {
- 
+  animation: transitionIn 0.75s;
   background-image: url("/images/amis.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -282,6 +293,7 @@ z-index: 999;
 /* formulario contacto */
 
 .contact-section{
+  animation: transitionIn 0.75s;
   background: rgba(167, 153, 144, 0.76);
   font-family: 'Poppins';
   width: 100%;
@@ -411,21 +423,22 @@ z-index: 999;
 
 /* LOGIN */
 .container-login{
+  animation: transitionIn 0.80s;
   font-family: 'Poppins', sans-serif;
   max-width: 440px;
   padding: 0 20px;
-  margin: 170px auto;
+  margin: 120px auto;
 }
 .wrapper-login{
   width: 100%;
   background: rgba(255, 255, 255, 0.596);
-  border-radius: 5px;
+  /* border-radius: 5px; */
   box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
 }
 .wrapper-login .title-login{
   height: 90px;
   background: rgba(141, 125, 115, 0.678);
-  border-radius: 5px 5px 0 0;
+  /* border-radius: 5px 5px 0 0; */
   color: #fff;
   font-size: 30px;
   font-weight: 500;
@@ -434,8 +447,9 @@ z-index: 999;
   justify-content: center;
 }
 .wrapper-login .form-login{
-  padding: 30px 25px 25px 25px;
+  padding: 50px 55px 25px 55px;
 }
+
 .wrapper-login .form-login .row-login{
   height: 45px;
   margin-bottom: 15px;
@@ -445,7 +459,7 @@ z-index: 999;
   height: 100%;
   width: 100%;
   outline: none;
-  padding-left: 60px;
+  padding-left: 100px;
   border-radius: 5px;
   border: 1px solid lightgrey;
   font-size: 16px;
@@ -464,8 +478,8 @@ z-index: 999;
   height: 100%;
   color: #fff;
   font-size: 18px;
-  background: rgba(141, 125, 115, 0.678);
-  border: 1px solid rgba(141, 125, 115, 0.678);
+  background: rgba(141, 125, 115, 0.404);
+  border: 1px solid rgba(141, 125, 115, 0.219);
   border-radius: 5px 0 0 5px;
   display: flex;
   align-items: center;

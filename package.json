@@ -20,5 +20,8 @@
     "nodemailer": "^6.7.3",
     "util": "^0.12.4"
   },
-  "keywords": []
+  "keywords": [],
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
