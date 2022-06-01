@@ -11,9 +11,9 @@ router.get("/", (req, res) => {
 });
 
 const validationRules = [
-  body("name", "Debe ingresar su nombre").exists().isLength({ min: 2 }),
-   body("email", "Debe ingresar un email válido").exists().isEmail(),
-  body("message", "Mensaje debe contener entre 10 y 300 caracteres")
+  body("name", "Please, enter your name").exists().isLength({ min: 2 }),
+   body("email", "You have entered an invalid e-mail address. Please try again").exists().isEmail(),
+  body("message", "Message must contain between 10 and 300 characters")
     .exists()
     .trim()
     .isLength({ min: 10, max: 300 }),
@@ -40,8 +40,8 @@ router.post( "/",
       const emailMsg = {
         to: "atencioncliente@empresa.com",
         from: req.body.email,
-        subject: "Mensaje desde formulario de contacto",
-        html: `${req.body.name} envió el siguiente mensaje: ${req.body.message}`,
+        subject: "Message from contact form",
+        html: `${req.body.name} just sent the following message: ${req.body.message}`,
       };
                         
       
@@ -57,9 +57,9 @@ router.post( "/",
       const sendMailStatus = await transport.sendMail(emailMsg);
       let sendMessage = "";
       if (sendMailStatus.rejected.length) {
-        sendMessage = "No pudimos enviar. 😞 Intente de nuevo";
+        sendMessage = "The message could not be sent. Please, try again";
       } else {
-        sendMessage = "mensaje enviado";
+        sendMessage = "Message sent";
       }
       res.render("order", { sendMessage });
     }

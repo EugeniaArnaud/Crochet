@@ -17,7 +17,7 @@ router.post("/", async (req, res) => {
     req.session.user = user;
     res.render("secret", { user });
   } else {
-    const message = "Usuario o Contraseña Incorrectos";
+    const message = "Wrong username or password";
     res.render("Login", { message });
   }
 });

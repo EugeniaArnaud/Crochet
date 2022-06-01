@@ -56,6 +56,6 @@ app.get("*", (req, res) => {
 
 app.listen(PORT, (err) => {
   err
-    ? console.log("explotó todo 😫")
+    ? console.log("not working 😫")
     : console.log(`Servidor corre en http://localhost:${PORT}/`);
 });
