@@ -17,8 +17,10 @@ router.post("/", async (req, res) => {
     req.session.user = user;
     res.render("secret", { user });
   } else {
-    const message = "Wrong username or password";
-    res.render("Login", { message });
+    const message = "Incorrect username or password";
+    res.render("login", { message });
   }
 });
 module.exports = router;
+
+
