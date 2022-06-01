@@ -1,5 +1,5 @@
 # Crochet
 You can see te app here: https://bambamcrochet.herokuapp.com/
 Try it! Login with:
-Usernmae: eugenia
+Username: eugenia
 Password: 12345
