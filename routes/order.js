@@ -31,9 +31,9 @@ router.post( "/",
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
        const formData = req.body;
-      // console.log(formData); no creo que vaya esto
-      const arrWarnings = errors.array();
-      res.render("order", { formData, arrWarnings });
+      // console.log(formData); 
+      const arrWarnings = errors.array(); //arr donde viene solamente los mensajes de error), info de estos msjes
+      res.render("order", { formData, arrWarnings }); //quiero que formdata y arrwarnings se vea en "order" render en order
 
       //aquí sigue el código de nuestro controlador POST
     } else {

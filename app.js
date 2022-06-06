@@ -13,7 +13,7 @@ const routeSecret = require("./routes/secret");
 
 const app = express();
 app.use(express.static(path.join(__dirname, "public")));
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false })); //lee datos que viene del input formulario login
 
 app.set("view engine", "hbs");
 hbs.registerPartials(path.join(__dirname, "./views/partials"));
